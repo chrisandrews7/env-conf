@@ -1,5 +1,5 @@
 {
-  "name": "env-conf",
+  "name": "enviro-conf",
   "version": "0.2.0",
   "description": "Configuration access for environment variables",
   "main": "index.js",
@@ -13,7 +13,8 @@
     "node-config",
     "config-node",
     "env",
-    "environment"
+    "environment",
+    "enviro-conf"
   ],
   "scripts": {
     "test": "mocha test --full-trace",
@@ -21,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrisandrews7/env-conf.git"
+    "url": "git+https://github.com/chrisandrews7/enviro-conf.git"
   },
   "author": "Chris Andrews",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chrisandrews7/env-conf/issues"
+    "url": "https://github.com/chrisandrews7/enviro-conf/issues"
   },
-  "homepage": "https://github.com/chrisandrews7/env-conf#readme",
+  "homepage": "https://github.com/chrisandrews7/enviro-conf#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "faker": "^3.1.0",
