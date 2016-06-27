@@ -1,0 +1,28 @@
+{
+  "name": "env-conf",
+  "version": "1.0.0",
+  "description": "Configuration access for environment variables",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test --full-trace",
+    "coverage": "istanbul cover _mocha -- test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisandrews7/env-conf.git"
+  },
+  "author": "Chris Andrews",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisandrews7/env-conf/issues"
+  },
+  "homepage": "https://github.com/chrisandrews7/env-conf#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3"
+  }
+}
