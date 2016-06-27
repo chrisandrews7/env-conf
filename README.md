@@ -2,6 +2,9 @@
 
 A simple node.js environment variables config loader inspired by The Twelve Factor App
 
+[![Build
+Status](https://travis-ci.org/chrisandrews7/env-conf.svg?branch=master)](https://travis-ci.org/chrisandrews7/env-conf) [![Coverage Status](https://coveralls.io/repos/github/chrisandrews7/env-conf/badge.svg?branch=master)](https://coveralls.io/github/chrisandrews7/env-conf?branch=master)
+
 ## Installation
 
 ```shell
