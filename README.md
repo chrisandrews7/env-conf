@@ -1,6 +1,6 @@
 # Environment Configuration
 
-A simple node.js config loader of environment variables inspired by The Twelve Factor App
+A simple node.js environment variables config loader inspired by The Twelve Factor App
 
 ## Installation
 

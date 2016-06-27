@@ -1,11 +1,20 @@
 {
   "name": "env-conf",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Configuration access for environment variables",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
+  "keywords": [
+    "conf",
+    "config",
+    "configuration",
+    "node-config",
+    "config-node",
+    "env",
+    "environment"
+  ],
   "scripts": {
     "test": "mocha test --full-trace",
     "coverage": "istanbul cover _mocha -- test"
