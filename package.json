@@ -1,7 +1,7 @@
 {
   "name": "enviro-conf",
   "version": "0.2.0",
-  "description": "Configuration access for environment variables",
+  "description": "Simple node.js environment variables config loader inspired by The Twelve Factor App",
   "main": "index.js",
   "directories": {
     "test": "test"
