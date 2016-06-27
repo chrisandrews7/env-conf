@@ -1,7 +1,17 @@
 var expect = require('chai').expect;
+var faker = require('faker');
 var config = require('../index');
 
 describe('Environment Config', function() {
+  var testKeyValue;
+
+  beforeEach(function() {
+    testKeyValue = {
+      key: faker.random.word(),
+      value: faker.random.word()
+    };
+  });
+
   describe('get()', function() {
     it('throw an error if no property is passed', function() {
       expect(config.get).to.throw('Calling get with null or undefined argument');
@@ -10,13 +20,27 @@ describe('Environment Config', function() {
     });
 
     it('throw an error the requested property doesnt exist', function() {
-      var propertyName = 'silly-billy';
-      expect(config.get.bind(config, propertyName)).to.throw('Configuration property "' + propertyName + '" is not defined');
+      expect(config.get.bind(config, testKeyValue.key)).to.throw('Configuration property "' + testKeyValue.key + '" is not defined');
     });
 
-    it('return the property value', function() {
-      process.env['TESTING'] = 'TESTING123';
-      expect(config.get('TESTING')).to.equal('TESTING123');
+    it('should return the property value', function() {
+      process.env[testKeyValue.key] = testKeyValue.value;
+      expect(config.get(testKeyValue.key)).to.equal(testKeyValue.value);
+    });
+  });
+
+  describe('has()', function() {
+    it('should return true if the property exists', function() {
+      process.env[testKeyValue.key] = testKeyValue.value;
+      expect(config.has(testKeyValue.key)).to.be.true;
+    });
+
+    it('should return false if the property doesnt exist', function() {
+      expect(config.has(testKeyValue.key)).to.be.false;
+    });
+
+    it('should false if no property is passed', function() {
+      expect(config.has()).to.be.false;
     });
   });
 });

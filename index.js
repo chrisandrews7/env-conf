@@ -1,6 +1,6 @@
 function get(property) {
   // Produce an exception if no property is passed
-  if(property === null || property === undefined) {
+  if(!property) {
     throw new Error('Calling get with null or undefined argument');
   }
 
@@ -12,6 +12,11 @@ function get(property) {
   return process.env[property];
 }
 
+function has(property) {
+  return !!process.env[property];
+}
+
 module.exports = {
-  get: get
+  get: get,
+  has: has
 };

@@ -1,16 +1,22 @@
-# Env Conf
+# Environment Configuration
 
-Simple node.js config loader inspired by The Twelve-Factor App
+A simple node.js config loader of environment variables inspired by The Twelve Factor App
+
+## Installation
+
+```shell
+$ npm install env-conf --save
+```
 
 ## Usage
 
-**Setup some environment variables:**
+**Setup environment variables:**
 
 ```shell
-$ PORT=3333 node app.js
+$ PORT=3333 SSL=false node yourAppName
 ```
 
-**Access the config in your app:**
+**Accessing config variables:**
 
 ```js
 var config = require('env-conf');
@@ -20,6 +26,18 @@ server.listen(port, ...);
 ```
 
 `config.get()` will throw an exception for undefined keys to help catch typos and missing values.
+
+**Checking if config variables exist:**
+
+```js
+var config = require('env-conf');
+//...
+if (config.has('SSL')) {
+  var port = config.get('PORT');
+  server.listen(port, ...);
+  //...
+}
+```
 
 ## References
 
