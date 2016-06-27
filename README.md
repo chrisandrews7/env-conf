@@ -42,6 +42,16 @@ if (config.has('SSL')) {
 }
 ```
 
+## Tests
+
+```shell
+$ npm test
+```
+
+## Release History
+
+* 0.2.0 Initial release
+
 ## References
 
 * [12 Factor App](http://12factor.net/config)
