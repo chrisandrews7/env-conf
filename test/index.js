@@ -13,13 +13,13 @@ describe('Environment Config', function() {
   });
 
   describe('get()', function() {
-    it('throw an error if no property is passed', function() {
+    it('should throw an error if no property is passed', function() {
       expect(config.get).to.throw('Calling get with null or undefined argument');
       expect(config.get.bind(config, null)).to.throw('Calling get with null or undefined argument');
       expect(config.get.bind(config, undefined)).to.throw('Calling get with null or undefined argument');
     });
 
-    it('throw an error the requested property doesnt exist', function() {
+    it('should throw an error if the requested property doesnt exist', function() {
       expect(config.get.bind(config, testKeyValue.key)).to.throw('Configuration property "' + testKeyValue.key + '" is not defined');
     });
 
@@ -39,7 +39,7 @@ describe('Environment Config', function() {
       expect(config.has(testKeyValue.key)).to.be.false;
     });
 
-    it('should false if no property is passed', function() {
+    it('should return false if no property is passed', function() {
       expect(config.has()).to.be.false;
     });
   });

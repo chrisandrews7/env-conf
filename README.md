@@ -1,6 +1,6 @@
 # Environment Configuration
 
-A simple node.js environment variables config loader inspired by The Twelve Factor App
+A simple node.js environment variable config loader inspired by The Twelve Factor App
 
 [![Build
 Status](https://travis-ci.org/chrisandrews7/enviro-conf.svg?branch=master)](https://travis-ci.org/chrisandrews7/enviro-conf) [![Coverage Status](https://coveralls.io/repos/github/chrisandrews7/enviro-conf/badge.svg?branch=master)](https://coveralls.io/github/chrisandrews7/enviro-conf?branch=master) [![npm version](https://img.shields.io/npm/v/enviro-conf.svg?style=flat)](https://www.npmjs.com/package/enviro-conf)
@@ -16,10 +16,10 @@ $ npm install enviro-conf --save
 **Setup environment variables:**
 
 ```shell
-$ PORT=3333 SSL=false node yourAppName
+$ export PORT=3000 FEATURE=something
 ```
 
-**Accessing config variables:**
+**Accessing config properties:**
 
 ```js
 var config = require('enviro-conf');
@@ -30,14 +30,13 @@ server.listen(port, ...);
 
 `config.get()` will throw an exception for undefined keys to help catch typos and missing values.
 
-**Checking if config variables exist:**
+**Check if config properties exist:**
 
 ```js
 var config = require('enviro-conf');
 //...
-if (config.has('SSL')) {
-  var port = config.get('PORT');
-  server.listen(port, ...);
+if (config.has('FEATURE')) {
+  var detail = config.get('FEATURE');
   //...
 }
 ```
@@ -48,10 +47,7 @@ if (config.has('SSL')) {
 $ npm test
 ```
 
-## Release History
-
-* 0.2.0 Initial release
-
-## References
+## Inspiration
 
 * [12 Factor App](http://12factor.net/config)
+* [Node Config](https://github.com/lorenwest/node-config)
