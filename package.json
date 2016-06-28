@@ -1,6 +1,6 @@
 {
   "name": "enviro-conf",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Simple node.js environment variable config loader inspired by The Twelve Factor App",
   "main": "index.js",
   "directories": {
